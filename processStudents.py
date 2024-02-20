@@ -28,12 +28,14 @@ through the logic of the problem.
 '''
 
 
+
 import csv
 
 
 # create a file object to open the file in read mode
-
-
+with open('students.csv','r') as infile:
+    all_students = csv.reader(infile)
+    #skip row
 
 # create a csv object from the file object
 
@@ -42,23 +44,30 @@ import csv
 
 
 #create an outfile object for the pocessed record
-
-
+outfile = open('Processing.csv','w')
+student_dict = csv.writer(outfile)
 
 #create a new dictionary named 'student_dict'
+for i in outfile:
+    if all_students[8] < float(3.0):
+        print[2][3]
 
 
 
 #use a loop to iterate through each row of the file
-
+for i in student_dict:
+     outfile.write()
 
     #check if the GPA is below 3.0. If so, write the record to the outfile
+if all_students[8] < 3.0:
+        print[2][3]
     
         
 
 
 
     # append the record to the dictionary with the student Full name in proper case 
+    
     # as the Key and the value as the GPA
     
 
@@ -67,14 +76,14 @@ import csv
 
 
 #print the entire dictionary
-
+print(student_dict)
 
 #Print the corresponding GPA for student 'Luke Brazzi'
-
+print()
 
 
 #close the outfile
-
+outfile.close()
 
 
 
